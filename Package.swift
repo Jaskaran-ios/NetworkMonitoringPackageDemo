@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "NetworkMonitoringPackageDemo",
+    platforms: [
+          .iOS(.v12) // Specify the minimum iOS version your package supports
+      ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(

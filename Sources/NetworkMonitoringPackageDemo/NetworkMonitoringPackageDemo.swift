@@ -1,2 +1,27 @@
 // The Swift Programming Language
-// https://docs.swift.org/swift-book
+import Foundation
+import Network
+
+public class NetworkMonitor {
+    private let monitor = NWPathMonitor()
+    
+    public init() {
+        startMonitoring()
+    }
+    
+    public func startMonitoring() {
+        monitor.pathUpdateHandler = { path in
+            if path.status == .satisfied {
+                print("Network is reachable")
+            } else {
+                print("Network is not reachable")
+            }
+        }
+        let queue = DispatchQueue(label: "NetworkMonitor")
+        monitor.start(queue: queue)
+    }
+    
+    deinit {
+        monitor.cancel()
+    }
+}
