@@ -10,15 +10,15 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "NetworkMonitoringPackageDemo",
-            targets: ["NetworkMonitoringPackageDemo"]),
+            name: "NetworkTestMonitoring",
+            targets: ["NetworkTestMonitoring"]),
     ],
     dependencies: [
 
     ],
     targets: [
         .target(
-            name: "NetworkMonitoringPackageDemo",
+            name: "NetworkTestMonitoring",
             dependencies: []),
     ]
 )
