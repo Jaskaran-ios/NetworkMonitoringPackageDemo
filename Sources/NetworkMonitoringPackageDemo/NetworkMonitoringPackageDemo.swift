@@ -5,9 +5,7 @@ import Network
 public class NetworkMonitor {
     private let monitor = NWPathMonitor()
     
-    public init() {
-        startMonitoring()
-    }
+    public init() {}
     
     public func startMonitoring() {
         monitor.pathUpdateHandler = { path in
