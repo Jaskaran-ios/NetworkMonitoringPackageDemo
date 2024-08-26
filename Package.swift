@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "NetworkMonitoringPackageDemo",
+    name: "NetworkTestMonitoring",
     platforms: [
         .iOS(.v12)
     ],
